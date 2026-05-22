@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Betuyoga — Yoga consciente en Villa Urquiza</title>
+<meta name="description" content="Yoga con Bety en Villa Urquiza. Clases grupales e individuales con foco en postura, respiración y movimiento consciente. Miller 3539, CABA.">
+
+<meta property="og:title" content="Betuyoga — Yoga consciente en Villa Urquiza">
+<meta property="og:description" content="Clases grupales e individuales con Bety. Postura, respiración y movimiento consciente.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Betuyoga",
+  "image": "",
+  "@id": "https://betuyoga.com.ar",
+  "url": "https://betuyoga.com.ar",
+  "telephone": "+541155755862",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Miller 3539",
+    "addressLocality": "Villa Urquiza",
+    "addressRegion": "CABA",
+    "postalCode": "C1431",
+    "addressCountry": "AR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -34.561151,
+    "longitude": -58.489374
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "23"
+  }
+}
+</script>
+
+<style>
+  :root {
+    --bg: #F7F4EE;
+    --bg-alt: #EFEBE2;
+    --text: #2D3E2D;
+    --text-soft: #5A6B5A;
+    --accent: #8A9F7E;
+    --accent-dark: #6A7E60;
+    --terracota: #C9876C;
+    --beige: #E8D9C4;
+    --muted: #7A6E5E;
+    --white: #FFFFFF;
+    --shadow: 0 4px 20px rgba(45, 62, 45, 0.08);
+    --shadow-strong: 0 8px 40px rgba(45, 62, 45, 0.12);
+    --radius: 14px;
+    --radius-lg: 22px;
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2rem;
+    --space-6: 3rem;
+    --space-8: 4rem;
+    --space-12: 6rem;
+    --space-16: 8rem;
+    --container: 1140px;
+    --display: 'Marcellus', Georgia, serif;
+    --body: 'Inter Tight', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--body);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; text-decoration: none; }
+  h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; line-height: 1.15; letter-spacing: -0.01em; }
+
+  .container { max-width: var(--container); margin: 0 auto; padding: 0 var(--space-3); }
+
+  /* ============ NAV ============ */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(247, 244, 238, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(45, 62, 45, 0.06);
+  }
+  .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+  .logo { font-family: var(--display); font-size: 1.4rem; color: var(--text); letter-spacing: 0.02em; }
+  .nav-links { display: none; gap: var(--space-4); }
+  .nav-links a { font-size: 0.95rem; color: var(--text-soft); transition: color .2s; }
+  .nav-links a:hover { color: var(--accent-dark); }
+  .nav-cta {
+    background: var(--accent); color: white; padding: 0.55rem 1.1rem; border-radius: 999px;
+    font-size: 0.88rem; font-weight: 500; transition: background .2s;
+  }
+  .nav-cta:hover { background: var(--accent-dark); }
+  @media (min-width: 768px) { .nav-links { display: flex; } }
+
+  /* ============ HERO ============ */
+  .hero {
+    min-height: 92vh;
+    padding: 7rem 0 var(--space-8);
+    display: flex; align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    align-items: center;
+  }
+  @media (min-width: 900px) {
+    .hero-grid { grid-template-columns: 1.05fr 1fr; gap: var(--space-8); }
+  }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.85rem; color: var(--accent-dark);
+    text-transform: uppercase; letter-spacing: 0.12em;
+    margin-bottom: var(--space-2);
+  }
+  .hero-eyebrow::before {
+    content: ""; width: 28px; height: 1px; background: var(--accent);
+  }
+  .hero h1 {
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    margin-bottom: var(--space-3);
+    color: var(--text);
+  }
+  .hero h1 em { font-style: italic; color: var(--accent-dark); }
+  .hero-sub {
+    font-size: clamp(1.05rem, 2vw, 1.2rem);
+    color: var(--text-soft);
+    margin-bottom: var(--space-4);
+    max-width: 480px;
+  }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    background: var(--accent); color: white;
+    padding: 1rem 1.8rem; border-radius: 999px;
+    font-weight: 500; font-size: 1rem;
+    transition: all .25s; box-shadow: var(--shadow);
+  }
+  .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: var(--shadow-strong); }
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    color: var(--text); font-weight: 500; font-size: 0.95rem;
+    padding: 1rem 1.4rem;
+    border-bottom: 1px solid var(--text);
+    transition: opacity .2s;
+  }
+  .btn-secondary:hover { opacity: 0.65; }
+
+  .hero-image {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 4/5;
+    box-shadow: var(--shadow-strong);
+  }
+  .hero-image img { width: 100%; height: 100%; object-fit: cover; }
+  .hero-rating {
+    position: absolute; bottom: 1.5rem; left: 1.5rem; right: 1.5rem;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(8px);
+    padding: 1rem 1.2rem; border-radius: var(--radius);
+    display: flex; align-items: center; gap: 0.8rem;
+  }
+  .hero-rating-stars { color: #E8A53C; font-size: 1.05rem; letter-spacing: 0.1em; }
+  .hero-rating-text { font-size: 0.88rem; color: var(--text-soft); line-height: 1.3; }
+  .hero-rating-text strong { color: var(--text); font-weight: 600; }
+
+  /* ============ SECTION COMMON ============ */
+  section { padding: var(--space-12) 0; }
+  .section-eyebrow {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.82rem; color: var(--accent-dark);
+    text-transform: uppercase; letter-spacing: 0.12em;
+    margin-bottom: var(--space-2);
+  }
+  .section-eyebrow::before { content: ""; width: 24px; height: 1px; background: var(--accent); }
+  .section-title {
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    margin-bottom: var(--space-3);
+    max-width: 720px;
+  }
+  .section-title em { font-style: italic; color: var(--accent-dark); }
+  .section-intro {
+    font-size: 1.08rem; color: var(--text-soft);
+    max-width: 620px; margin-bottom: var(--space-6);
+  }
+
+  /* ============ SOBRE BETY ============ */
+  .sobre {
+    background: var(--bg-alt);
+    border-radius: var(--radius-lg);
+    margin: var(--space-8) auto;
+    padding: var(--space-8) var(--space-6);
+  }
+  @media (min-width: 768px) { .sobre { padding: var(--space-12) var(--space-8); } }
+  .sobre-grid {
+    display: grid; grid-template-columns: 1fr;
+    gap: var(--space-6); align-items: center;
+  }
+  @media (min-width: 900px) {
+    .sobre-grid { grid-template-columns: 1fr 1.1fr; gap: var(--space-8); }
+  }
+  .sobre-img {
+    border-radius: var(--radius);
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    box-shadow: var(--shadow);
+  }
+  .sobre-img img { width: 100%; height: 100%; object-fit: cover; }
+  .sobre p { font-size: 1.05rem; color: var(--text-soft); margin-bottom: var(--space-2); }
+  .sobre p:last-of-type { margin-bottom: var(--space-3); }
+
+  /* ============ PRÁCTICAS ============ */
+  .practicas-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+  @media (min-width: 700px) { .practicas-grid { grid-template-columns: repeat(3, 1fr); } }
+
+  .practica-card {
+    background: white;
+    border-radius: var(--radius);
+    padding: var(--space-4);
+    box-shadow: var(--shadow);
+    transition: transform .25s, box-shadow .25s;
+  }
+  .practica-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-strong); }
+  .practica-icon {
+    width: 48px; height: 48px;
+    background: var(--bg-alt);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: var(--space-3);
+    color: var(--accent-dark);
+  }
+  .practica-card h3 { font-size: 1.35rem; margin-bottom: 0.6rem; }
+  .practica-card p { font-size: 0.96rem; color: var(--text-soft); }
+
+  /* ============ PRECIOS ============ */
+  .precios {
+    background: var(--text);
+    color: white;
+    padding: var(--space-12) 0;
+  }
+  .precios .section-title, .precios .section-intro { color: white; }
+  .precios .section-intro { opacity: 0.75; }
+  .precios .section-eyebrow { color: #B8C9AC; }
+  .precios .section-eyebrow::before { background: #B8C9AC; }
+  .precios-grid {
+    display: grid; grid-template-columns: 1fr; gap: var(--space-3);
+  }
+  @media (min-width: 700px) { .precios-grid { grid-template-columns: repeat(3, 1fr); } }
+  .precio-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: var(--space-4);
+    border-radius: var(--radius);
+    text-align: center;
+  }
+  .precio-card.destacado {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+  .precio-card.destacado .precio-badge {
+    background: var(--terracota); color: white;
+  }
+  .precio-badge {
+    display: inline-block; font-size: 0.74rem; padding: 0.25rem 0.7rem;
+    border-radius: 999px; background: rgba(255,255,255,0.12);
+    text-transform: uppercase; letter-spacing: 0.1em;
+    margin-bottom: var(--space-2);
+  }
+  .precio-card h3 { font-size: 1.5rem; margin-bottom: var(--space-2); color: white; }
+  .precio-card .precio { font-size: 2.2rem; font-family: var(--display); margin-bottom: 0.3rem; }
+  .precio-card .precio-detalle { font-size: 0.85rem; opacity: 0.7; margin-bottom: var(--space-3); }
+  .precio-card ul { list-style: none; text-align: left; }
+  .precio-card ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.94rem;
+    display: flex; align-items: flex-start; gap: 0.5rem;
+  }
+  .precio-card ul li::before { content: "✓"; color: #B8C9AC; flex-shrink: 0; }
+  .precio-card.destacado ul li::before { color: white; }
+  .precio-card.destacado ul li { border-color: rgba(255,255,255,0.2); }
+
+  /* ============ RESEÑAS ============ */
+  .resenas { background: var(--bg-alt); }
+  .resenas-grid {
+    display: grid; grid-template-columns: 1fr; gap: var(--space-3);
+  }
+  @media (min-width: 800px) { .resenas-grid { grid-template-columns: repeat(3, 1fr); } }
+  .resena-card {
+    background: white;
+    padding: var(--space-4);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: flex; flex-direction: column;
+  }
+  .resena-stars { color: #E8A53C; letter-spacing: 0.1em; margin-bottom: var(--space-2); }
+  .resena-text { font-size: 1rem; color: var(--text); line-height: 1.65; margin-bottom: var(--space-3); flex: 1; }
+  .resena-autor {
+    display: flex; align-items: center; gap: 0.7rem;
+    padding-top: var(--space-2);
+    border-top: 1px solid var(--bg-alt);
+  }
+  .resena-avatar {
+    width: 38px; height: 38px; border-radius: 50%;
+    background: var(--accent); color: white;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--display); font-size: 1rem;
+  }
+  .resena-nombre { font-weight: 600; font-size: 0.93rem; }
+  .resena-fecha { font-size: 0.8rem; color: var(--text-soft); }
+  .resenas-google {
+    margin-top: var(--space-6);
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--text-soft);
+  }
+  .resenas-google a { color: var(--accent-dark); border-bottom: 1px solid currentColor; }
+
+  /* ============ VISITA ============ */
+  .visita-grid {
+    display: grid; grid-template-columns: 1fr; gap: var(--space-4);
+  }
+  @media (min-width: 900px) { .visita-grid { grid-template-columns: 1fr 1.2fr; gap: var(--space-6); } }
+  .visita-info p { color: var(--text-soft); margin-bottom: var(--space-3); }
+  .visita-data { margin-top: var(--space-3); }
+  .visita-data-item {
+    display: flex; align-items: flex-start; gap: 0.9rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--beige);
+  }
+  .visita-data-item:last-child { border-bottom: none; }
+  .visita-data-icon {
+    color: var(--accent-dark); flex-shrink: 0;
+    width: 22px; height: 22px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .visita-data-label { font-size: 0.78rem; color: var(--text-soft); text-transform: uppercase; letter-spacing: 0.06em; }
+  .visita-data-value { font-size: 1rem; color: var(--text); font-weight: 500; }
+  .visita-map {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    aspect-ratio: 4/3;
+    min-height: 380px;
+  }
+  .visita-map iframe { width: 100%; height: 100%; border: none; display: block; }
+
+  /* ============ CTA FINAL ============ */
+  .cta-final {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+    color: white;
+    text-align: center;
+  }
+  .cta-final .section-title { color: white; margin-left: auto; margin-right: auto; }
+  .cta-final p {
+    color: rgba(255,255,255,0.92); font-size: 1.1rem;
+    max-width: 540px; margin: 0 auto var(--space-4);
+  }
+  .cta-final .btn-primary {
+    background: white; color: var(--accent-dark);
+  }
+  .cta-final .btn-primary:hover { background: var(--bg); }
+
+  /* ============ FOOTER ============ */
+  footer {
+    background: var(--text); color: rgba(255,255,255,0.7);
+    padding: var(--space-6) 0 var(--space-3);
+    font-size: 0.9rem;
+  }
+  .footer-grid {
+    display: grid; grid-template-columns: 1fr; gap: var(--space-4);
+    margin-bottom: var(--space-4);
+  }
+  @media (min-width: 700px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr; } }
+  .footer h4 { color: white; font-family: var(--body); font-size: 0.92rem; font-weight: 600; margin-bottom: var(--space-2); letter-spacing: 0.04em; }
+  .footer-logo { font-family: var(--display); font-size: 1.6rem; color: white; margin-bottom: 0.6rem; }
+  .footer-tag { font-size: 0.9rem; opacity: 0.75; max-width: 280px; }
+  .footer ul { list-style: none; }
+  .footer ul li { margin-bottom: 0.4rem; }
+  .footer ul li a { transition: color .2s; }
+  .footer ul li a:hover { color: white; }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding-top: var(--space-3);
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-2);
+    font-size: 0.83rem; opacity: 0.6;
+  }
+  .footer-bottom a { color: rgba(255,255,255,0.85); border-bottom: 1px dotted currentColor; }
+
+  /* ============ WHATSAPP FAB ============ */
+  .whatsapp-fab {
+    position: fixed; bottom: 24px; right: 24px; z-index: 999;
+    width: 60px; height: 60px;
+    background: #25D366; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 24px rgba(37, 211, 102, 0.4);
+    transition: transform .2s;
+    animation: pulse 3s ease-in-out 2;
+  }
+  .whatsapp-fab:hover { transform: scale(1.08); }
+  .whatsapp-fab svg { width: 32px; height: 32px; fill: white; }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 6px 24px rgba(37, 211, 102, 0.4); }
+    50% { box-shadow: 0 6px 24px rgba(37, 211, 102, 0.4), 0 0 0 16px rgba(37, 211, 102, 0); }
+  }
+
+  /* ============ DEMO BANNER ============ */
+  .demo-banner {
+    position: fixed; top: 0; left: 0; right: 0;
+    background: var(--terracota); color: white;
+    text-align: center; padding: 0.55rem var(--space-2);
+    font-size: 0.82rem; z-index: 200;
+    display: none;
+  }
+  .demo-banner.show { display: block; }
+  .demo-banner.show + .nav { top: 36px; }
+  .demo-banner.show ~ .hero { padding-top: 9rem; }
+
+  /* ============ EXPIRED ============ */
+  .expired-overlay {
+    position: fixed; inset: 0;
+    background: rgba(45, 62, 45, 0.96);
+    backdrop-filter: blur(6px);
+    z-index: 9999;
+    display: none;
+    align-items: center; justify-content: center;
+    padding: var(--space-3);
+  }
+  .expired-overlay.show { display: flex; }
+  .expired-box {
+    background: var(--bg); border-radius: var(--radius-lg);
+    padding: var(--space-6); max-width: 480px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  }
+  .expired-box h2 { font-size: 1.8rem; margin-bottom: var(--space-2); }
+  .expired-box p { color: var(--text-soft); margin-bottom: var(--space-3); }
+</style>
+</head>
+<body>
+
+<!-- Demo banner -->
+<div class="demo-banner" id="demoBanner">
+  Vista previa para <strong>Betuyoga</strong> · esta demo expira en <span id="diasRestantes">7</span> días
+</div>
+
+<!-- Nav -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="#hero" class="logo">Betuyoga</a>
+    <div class="nav-links">
+      <a href="#sobre">Bety</a>
+      <a href="#practicas">Cómo practicamos</a>
+      <a href="#precios">Precios</a>
+      <a href="#visita">Visitanos</a>
+    </div>
+    <a href="#cta" class="nav-cta">Probá una clase</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero" id="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="hero-eyebrow">Yoga · Villa Urquiza</span>
+      <h1>Yoga <em>consciente</em>, a tu propio ritmo.</h1>
+      <p class="hero-sub">Práctica con foco en postura, respiración y movimiento. Clases grupales e individuales con Bety, a una cuadra de Plaza Echeverría.</p>
+      <div class="hero-ctas">
+        <a href="#cta" class="btn-primary" id="heroWhatsapp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>
+          Probá una clase
+        </a>
+        <a href="#sobre" class="btn-secondary">Conocer a Bety →</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=900&q=80" alt="Espacio cálido de yoga con luz natural">
+      <div class="hero-rating">
+        <div>
+          <div class="hero-rating-stars">★★★★★</div>
+          <div class="hero-rating-text"><strong>5,0</strong> en Google · 23 reseñas reales</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Sobre Bety -->
+<section id="sobre">
+  <div class="container">
+    <div class="sobre">
+      <div class="sobre-grid">
+        <div class="sobre-img">
+          <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?auto=format&fit=crop&w=800&q=80" alt="Postura de yoga en estudio iluminado">
+        </div>
+        <div>
+          <span class="section-eyebrow">La profe</span>
+          <h2 class="section-title">Yoga con <em>Bety</em></h2>
+          <p>Hace años que doy clases en Villa Urquiza, con la idea de que el yoga es para todo el mundo, en cualquier momento de la vida. Acá no hay performance ni comparación: hay tu cuerpo, tu respiración y un espacio para escucharte.</p>
+          <p>Trabajamos postura consciente, respiración y movimiento de a poco. Las clases son chicas — me importa mirarte, ajustar y acompañarte donde estás hoy.</p>
+          <p>Si nunca hiciste yoga, si volvés después de años, o si querés algo individual: hay un espacio para vos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Cómo practicamos -->
+<section id="practicas">
+  <div class="container">
+    <span class="section-eyebrow">Cómo practicamos</span>
+    <h2 class="section-title">Tres formas de <em>encontrarte</em> en la práctica</h2>
+    <p class="section-intro">Cada cuerpo es distinto y cada momento también. Por eso ofrezco distintas modalidades, todas con la misma escucha.</p>
+    <div class="practicas-grid">
+      <div class="practica-card">
+        <div class="practica-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="3"/><path d="M12 11v10M8 14l4-3 4 3M6 21h12"/></svg>
+        </div>
+        <h3>Clases grupales</h3>
+        <p>Grupos chicos en el estudio, con foco en postura y respiración. Pensadas para que puedas seguirlas sin experiencia previa.</p>
+      </div>
+      <div class="practica-card">
+        <div class="practica-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 1 1-8 0V6a4 4 0 0 1 4-4z"/><path d="M4 22v-2a8 8 0 0 1 16 0v2"/></svg>
+        </div>
+        <h3>Prácticas individuales</h3>
+        <p>Sesión uno a uno para trabajar tu objetivo puntual: lesiones, postura específica, vuelta a la actividad o profundizar la práctica.</p>
+      </div>
+      <div class="practica-card">
+        <div class="practica-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </div>
+        <h3>Adultos mayores</h3>
+        <p>Práctica adaptada a articulaciones y movilidad. Recuperar actividad después de una pausa larga, sin exigencias ni comparaciones.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Precios -->
+<section class="precios" id="precios">
+  <div class="container">
+    <span class="section-eyebrow">Planes</span>
+    <h2 class="section-title">Empezá con lo que <em>te cierre</em></h2>
+    <p class="section-intro">Sin contratos ni permanencias. Probá una clase, y si te suma, seguimos.</p>
+    <div class="precios-grid">
+      <div class="precio-card">
+        <span class="precio-badge">Primer contacto</span>
+        <h3>Clase de prueba</h3>
+        <div class="precio">$8.000</div>
+        <div class="precio-detalle">Una clase sin compromiso</div>
+        <ul>
+          <li>Ideal si nunca hiciste yoga</li>
+          <li>Conocer el estudio y a Bety</li>
+          <li>Sin requisitos previos</li>
+        </ul>
+      </div>
+      <div class="precio-card destacado">
+        <span class="precio-badge">Más elegido</span>
+        <h3>Bono mensual</h3>
+        <div class="precio">$42.000</div>
+        <div class="precio-detalle">4 clases por mes · grupal</div>
+        <ul>
+          <li>1 clase por semana</li>
+          <li>Reservás los horarios que mejor te queden</li>
+          <li>Las clases no se pierden si avisás</li>
+        </ul>
+      </div>
+      <div class="precio-card">
+        <span class="precio-badge">Personalizado</span>
+        <h3>Práctica individual</h3>
+        <div class="precio">$22.000</div>
+        <div class="precio-detalle">Por sesión uno a uno</div>
+        <ul>
+          <li>Foco en tu objetivo específico</li>
+          <li>Horarios flexibles</li>
+          <li>Consultá por bonos de 4 u 8 sesiones</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reseñas -->
+<section class="resenas" id="resenas">
+  <div class="container">
+    <span class="section-eyebrow">Lo que dicen</span>
+    <h2 class="section-title">Reseñas reales de <em>Google</em></h2>
+    <p class="section-intro">23 reseñas con calificación perfecta. Estas son las palabras de quienes ya practican con Bety.</p>
+    <div class="resenas-grid">
+      <div class="resena-card">
+        <div class="resena-stars">★★★★★</div>
+        <p class="resena-text">"Me están ayudando. Vengo de un estado de poca actividad, soy lo qué ahora llaman un adulto mayor (solía ser viejo). Gracias a las clases se aflojaron articulaciones y el cuerpo responde mejor."</p>
+        <div class="resena-autor">
+          <div class="resena-avatar">A</div>
+          <div>
+            <div class="resena-nombre">Alberto Haber</div>
+            <div class="resena-fecha">Hace 7 meses</div>
+          </div>
+        </div>
+      </div>
+      <div class="resena-card">
+        <div class="resena-stars">★★★★★</div>
+        <p class="resena-text">"Las clases son muy buenas, aprendí a respirar mejor, a tener una postura más consciente y a estar en paz conmigo misma. Muy buena profe, buenas explicaciones, muy informativas sus clases, siempre te recibe con una sonrisa y es muy genuina como persona y empática."</p>
+        <div class="resena-autor">
+          <div class="resena-avatar">A</div>
+          <div>
+            <div class="resena-nombre">Ain Falcón</div>
+            <div class="resena-fecha">Hace 1 año</div>
+          </div>
+        </div>
+      </div>
+      <div class="resena-card">
+        <div class="resena-stars">★★★★★</div>
+        <p class="resena-text">"Salgo de las clases de Bety super tranquila y agradecida. La recomiendo mucho!"</p>
+        <div class="resena-autor">
+          <div class="resena-avatar">M</div>
+          <div>
+            <div class="resena-nombre">Milagros Loyola</div>
+            <div class="resena-fecha">Hace 8 meses</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="resenas-google">
+      Ver las <a href="https://www.google.com/maps/place/Betuyoga/@-34.561151,-58.489374,17z" target="_blank" rel="noopener">23 reseñas en Google</a> →
+    </p>
+  </div>
+</section>
+
+<!-- Visita -->
+<section id="visita">
+  <div class="container">
+    <span class="section-eyebrow">Visitanos</span>
+    <h2 class="section-title">En el corazón de <em>Villa Urquiza</em></h2>
+    <div class="visita-grid">
+      <div class="visita-info">
+        <p>El estudio está en una casa de Miller, a una cuadra de Plaza Echeverría. Cálido, con luz natural y todo lo necesario para practicar.</p>
+        <div class="visita-data">
+          <div class="visita-data-item">
+            <div class="visita-data-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="visita-data-label">Dirección</div>
+              <div class="visita-data-value">Miller 3539, CABA</div>
+            </div>
+          </div>
+          <div class="visita-data-item">
+            <div class="visita-data-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div>
+              <div class="visita-data-label">Horarios</div>
+              <div class="visita-data-value">Consultá disponibilidad por WhatsApp</div>
+            </div>
+          </div>
+          <div class="visita-data-item">
+            <div class="visita-data-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+            </div>
+            <div>
+              <div class="visita-data-label">Accesibilidad</div>
+              <div class="visita-data-value">Entrada accesible para sillas de ruedas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="visita-map">
+        <iframe loading="lazy" allowfullscreen
+          src="https://www.google.com/maps?q=Miller+3539,+Buenos+Aires&output=embed"
+          title="Mapa de Betuyoga en Miller 3539, Villa Urquiza"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA final -->
+<section class="cta-final" id="cta">
+  <div class="container">
+    <span class="section-eyebrow" style="color: white;">Empezá hoy</span>
+    <h2 class="section-title">Tu primera clase, sin compromiso.</h2>
+    <p>Escribime por WhatsApp y coordinamos un horario que te quede cómodo. Sin venta, sin presión: probás y vemos juntas si te suma.</p>
+    <a href="#" class="btn-primary" id="ctaWhatsapp">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      Escribir por WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Betuyoga</div>
+        <p class="footer-tag">Yoga consciente en Villa Urquiza. Postura, respiración, movimiento. Para todo cuerpo y todo momento.</p>
+      </div>
+      <div>
+        <h4>Visitanos</h4>
+        <ul>
+          <li>Miller 3539, CABA</li>
+          <li>Villa Urquiza</li>
+          <li><a href="https://www.google.com/maps/place/Betuyoga/@-34.561151,-58.489374,17z" target="_blank" rel="noopener">Ver en Google Maps</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Secciones</h4>
+        <ul>
+          <li><a href="#sobre">Bety</a></li>
+          <li><a href="#practicas">Cómo practicamos</a></li>
+          <li><a href="#precios">Precios</a></li>
+          <li><a href="#cta">Probá una clase</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Betuyoga · Todos los derechos reservados</div>
+      <div>Sitio diseñado por <a href="#" target="_blank" rel="noopener">Latente</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp FAB -->
+<a href="#" class="whatsapp-fab" id="whatsappFab" aria-label="Escribir por WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+</a>
+
+<!-- Expired overlay -->
+<div class="expired-overlay" id="expiredOverlay">
+  <div class="expired-box">
+    <h2>Esta demo expiró</h2>
+    <p>Esta vista previa fue armada como demostración y ya no está activa. Si te interesa la propuesta, escribime y armamos la versión definitiva.</p>
+    <a href="https://wa.me/5491123289626?text=Hola%20Bauti%2C%20vi%20la%20demo%20de%20Betuyoga%20y%20quiero%20avanzar%20con%20mi%20web." class="btn-primary" target="_blank" rel="noopener" style="background: var(--accent); color: white;">
+      Escribir a Bauti
+    </a>
+  </div>
+</div>
+
+<script>
+  // ===== Config =====
+  // Número de Bauti (no el de Bety) — todos los WhatsApps llegan a él
+  const WHATSAPP_NUM = '5491123289626';
+  const MSG_DEFAULT = '¡Hola! Vi la web de Betuyoga y quería probar una clase. ¿Cuándo tenés disponibilidad?';
+  const MSG_HERO = '¡Hola! Quería probar una clase de yoga. ¿Cómo me anoto?';
+  const MSG_CTA = '¡Hola! Me interesa empezar a practicar yoga. ¿Cuándo puedo probar una clase?';
+
+  function waLink(msg) {
+    return 'https://wa.me/' + WHATSAPP_NUM + '?text=' + encodeURIComponent(msg);
+  }
+  document.getElementById('whatsappFab').href = waLink(MSG_DEFAULT);
+  document.getElementById('heroWhatsapp').href = waLink(MSG_HERO);
+  document.getElementById('ctaWhatsapp').href = waLink(MSG_CTA);
+
+  // ===== Expirador 7 días =====
+  // Primera vez que se abre la demo, se guarda la fecha. Después expira a los 7 días.
+  const STORAGE_KEY = 'betuyoga_demo_first_open';
+  const EXPIRY_DAYS = 7;
+  let firstOpen = null;
+  try {
+    firstOpen = localStorage.getItem(STORAGE_KEY);
+    if (!firstOpen) {
+      firstOpen = Date.now().toString();
+      localStorage.setItem(STORAGE_KEY, firstOpen);
+    }
+    firstOpen = parseInt(firstOpen, 10);
+  } catch (e) {
+    firstOpen = Date.now();
+  }
+
+  const msPerDay = 1000 * 60 * 60 * 24;
+  const diasTranscurridos = Math.floor((Date.now() - firstOpen) / msPerDay);
+  const diasRestantes = EXPIRY_DAYS - diasTranscurridos;
+
+  const banner = document.getElementById('demoBanner');
+  const diasEl = document.getElementById('diasRestantes');
+
+  if (diasRestantes > 0) {
+    banner.classList.add('show');
+    diasEl.textContent = diasRestantes;
+  } else {
+    document.getElementById('expiredOverlay').classList.add('show');
+  }
+
+  // ===== Suavizar el scroll evitando que la nav fija tape el título =====
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
